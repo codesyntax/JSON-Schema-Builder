@@ -52,33 +52,24 @@ function schemaCtrler($scope, JsonSchema) {
     var schema = {
         "type": "object",
         "properties": {
-            "name": {
+            "myText": {
                 "type": "string",
-                "description": "user name"
             },
-            "age": {
-                "type": "integer"
+            "myBoolean": {
+                "type": "boolean"
             },
-            "addresses": {
-                "type": "array",
-                "items": {
-                    "$ref": "#/definitions/address"
-                }
-            },
-            "services": {
+            "myChoices": {
                 "anyOf": [
                     {
-                        "$ref": "#/definitions/service1"
+                        "description": "option1"
                     },
                     {
-                        "$ref": "#/definitions/service2"
+                        "description": "option2"
                     }
                 ]
             }
         },
-        "required": [
-            "name"
-        ]
+        "required": []
     }
 
     $scope.data = JsonSchema.schema2obj(schema);
