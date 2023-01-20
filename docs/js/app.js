@@ -67,6 +67,16 @@ function schemaCtrler($scope, JsonSchema) {
                         "description": "option2"
                     }
                 ]
+            },
+            "myMultipleChoices": {
+                "allOf": [
+                    {
+                        "description": "option1"
+                    },
+                    {
+                        "description": "option2"
+                    }
+                ]
             }
         },
         "required": []
